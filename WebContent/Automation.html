@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset="ISO-8859-1">
+<link href="CSS/Index.css" rel="stylesheet" type="text/css">
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="jquerry/com.prodapt.getinfo/getinfo.product.js" type="text/javascript"></script>
+<title>Automation</title>
+</head>
+<body>
+<h3>VM AUTOMATION</h3>
+	<div>
+   Enter your Name:<input id="nme" name="name" type="text" required><br>
+   <br><diV>Select the Environment:
+    <input type="radio" id="envsit" name="Environment" value="sIT">SIT
+   	<input type="radio" id="envstage" name="Environment" value="STAGING">STAGING
+    <input type="radio" id="envuat" name="Environment" value="UAT" >UAT
+   	</diV>
+		<br>Enter Company Name<input type="text" id="cname" name="companyName" required><br>
+		<br> Enter PostalCode<input type="text" id="pcode" name="postalcode" required><br>
+		<br> Select the Category
+		<label> 
+		<div class="sa">
+		 <input type="radio" name="Check" id="SACBox" value="StandAlone">StandAlone
+		 </div>
+		 <div class="bu">
+		 <input type="radio" name="Check" id="BCBox" value="Bundle">Bundle
+		 </div>
+		</label><br>
+		
+		<br><div id="StandAlone" class="box sa">Select any StandAloneProduct :
+			<label> <input type="checkbox" name="StandAloneProduct" id="sBels" value="StandAloneBels">Bels</label> 
+			<input type="checkbox" name="StandAloneProduct" id="sData" value="StandAloneData"> data
+			 <input type="checkbox" name="StandAloneProduct" id="sMobile" value="StandAloneMobile"> Mobile
+			<div id="StandAloneBels" class="box">
+			<input type="radio" name="BelsCategory" value="Bels (On-net)-test">Bels (On-net)-test <br>
+			<input type="radio" name="BelsCategory" value="Bels (On-net)">Bels (On-net) <br>
+			<input type="radio" name="BelsCategory" value="Bels (On-net) free install">Bels (On-net) free install <br>
+			<input type="radio" name="BelsCategory" value="ISDN 30 (On-net)">ISDN 30 (On-net) <br>
+			<input type="radio" name="BelsCategory" value="BELS (Off-Net)">BELS (Off-Net) <br>
+			<input type="radio" name="BelsCategory" value="ISDN2 (Off-net)">ISDN2 (Off-net) <br>
+			<input type="radio" name="BelsCategory" value="ISDN 30 (Off-net)">ISDN 30 (Off-net) <br>
+			<input type="radio" name="BelsCategory" value="BELS (Off-Net) free install">BELS (Off-Net) free install <br>
+			</div>
+			
+			
+			 
+				<div id="StandAloneData" class="box">
+				<input type="radio" name="Datacategory" value="Voom Fibre:OPTION THREE 350">Voom Fibre:OPTION THREE 350 <br>
+				<input type="radio" name="Datacategory" value="Voom Fibre:OPTION THREE 300">Voom Fibre:OPTION THREE 300 <br>
+				<input type="radio" name="Datacategory" value="Voom Fibre:OPTION THREE 200">Voom Fibre:OPTION THREE 200 <br>
+				<input type="radio" name="Datacategory" value="Voom Fibre:OPTION TWO 350">Voom Fibre:OPTION TWO 350 <br>
+				<input type="radio" name="Datacategory" value="Voom Fibre:OPTION TWO 300">Voom Fibre:OPTION TWO 300 <br>
+				<input type="radio" name="Datacategory" value="Voom Fibre:OPTION TWO 200">Voom Fibre:OPTION TWO 200 <br>
+				<input type="radio" name="Datacategory" value="Voom Fibre:OPTION ONE 350">Voom Fibre:OPTION ONE 350 <br>
+				<input type="radio" name="Datacategory" value="Voom Fibre:OPTION ONE 300">Voom Fibre:OPTION ONE 300 <br>
+				<input type="radio" name="Datacategory" value="Voom Fibre:OPTION ONE 200">Voom Fibre:OPTION ONE 200 <br>
+				<input type="radio" name="Datacategory" value="Off-Net Broadband (Up to 38 MB)">Off-Net Broadband (Up to 38 MB) <br>
+				<input type="radio" name="Datacategory" value="Off-Net Broadband (Up to 76 MB)">Off-Net Broadband (Up to 76 MB) <br>
+				<input type="radio" name="Datacategory" value="Superfast Broadband 50">Superfast Broadband 50 <br>
+				<input type="radio" name="Datacategory" value="MIA">MIA <br>
+				
+				</div>
+				
+				<div id="StandAloneMobile" class="box">
+				<input type="radio" name="Mobilecategory" value="SIM Card Only 1GB">SIM Card Only 1GB <br>
+				<input type="radio" name="Mobilecategory" value="SIM Card Only 4GB">SIM Card Only 4GB <br>
+				<input type="radio" name="Mobilecategory" value="Mobile Broadband SIM 4GB">Mobile Broadband SIM 4GB <br>
+				<input type="radio" name="Mobilecategory" value="Mobile Broadband SIM 16GB">Mobile Broadband SIM 16GB <br>
+				<input type="radio" name="Mobilecategory" value="SIM Card Only 1GB (Saver 1)">SIM Card Only 1GB (Saver 1) <br>
+				<input type="radio" name="Mobilecategory" value="SIM Card Only 4GB (Saver 1)">SIM Card Only 4GB (Saver 1) <br>
+				<input type="radio" name="Mobilecategory" value="SIM Card Only 1GB (Saver 2)">SIM Card Only 1GB (Saver 2) <br>
+				<input type="radio" name="Mobilecategory" value="SIM Card Only 4GB (Saver 2)">SIM Card Only 4GB (Saver 2) <br>
+				</div>
+		</div>
+		<!-- -----bundle -->
+		<div id="Bundle" class="box bu">Select any BundleProduct :
+			<input type="checkbox" name="StandAloneProduct" id="bBels"  value="BundleBels">Bels</label> 
+			<input type="checkbox" name="StandAloneProduct" id="bData" value="BundleData"> data
+			 <input type="checkbox" name="StandAloneProduct" id="bMobile" value="BundleMobile"> Mobile
+			 
+			 <div id="BundleBels" class="box">
+			<input type="radio" name="BelsCategory" value="Bels (On-net)-test">Bels (On-net)-test <br>
+			<input type="radio" name="BelsCategory" value="Bels (On-net)">Bels (On-net) <br>
+			<input type="radio" name="BelsCategory" value="Bels (On-net) free install">Bels (On-net) free install <br>
+			<input type="radio" name="BelsCategory" value="ISDN 30 (On-net)">ISDN 30 (On-net) <br>
+			<input type="radio" name="BelsCategory" value="BELS (Off-Net)">BELS (Off-Net) <br>
+			<input type="radio" name="BelsCategory" value="ISDN2 (Off-net)">ISDN2 (Off-net) <br>
+			<input type="radio" name="BelsCategory" value="ISDN 30 (Off-net)">ISDN 30 (Off-net) <br>
+			<input type="radio" name="BelsCategory" value="BELS (Off-Net) free install">BELS (Off-Net) free install <br>
+			</div>
+			
+			
+			 
+				<div id="BundleData" class="box">
+				<input type="radio" name="Datacategory" value="Voom Fibre:OPTION THREE 350">Voom Fibre:OPTION THREE 350 <br>
+				<input type="radio" name="Datacategory" value="Voom Fibre:OPTION THREE 300">Voom Fibre:OPTION THREE 300 <br>
+				<input type="radio" name="Datacategory" value="Voom Fibre:OPTION THREE 200">Voom Fibre:OPTION THREE 200 <br>
+				<input type="radio" name="Datacategory" value="Voom Fibre:OPTION TWO 350">Voom Fibre:OPTION TWO 350 <br>
+				<input type="radio" name="Datacategory" value="Voom Fibre:OPTION TWO 300">Voom Fibre:OPTION TWO 300 <br>
+				<input type="radio" name="Datacategory" value="Voom Fibre:OPTION TWO 200">Voom Fibre:OPTION TWO 200 <br>
+				<input type="radio" name="Datacategory" value="Voom Fibre:OPTION ONE 350">Voom Fibre:OPTION ONE 350 <br>
+				<input type="radio" name="Datacategory" value="Voom Fibre:OPTION ONE 300">Voom Fibre:OPTION ONE 300 <br>
+				<input type="radio" name="Datacategory" value="Voom Fibre:OPTION ONE 200">Voom Fibre:OPTION ONE 200 <br>
+				<input type="radio" name="Datacategory" value="Off-Net Broadband (Up to 38 MB)">Off-Net Broadband (Up to 38 MB) <br>
+				<input type="radio" name="Datacategory" value="Off-Net Broadband (Up to 76 MB)">Off-Net Broadband (Up to 76 MB) <br>
+				<input type="radio" name="Datacategory" value="Superfast Broadband 50">Superfast Broadband 50 <br>
+				<input type="radio" name="Datacategory" value="MIA">MIA <br>
+				
+				</div>
+				
+				<div id="BundleMobile" class="box">
+				<input type="radio" name="Mobilecategory" value="SIM Card Only 1GB">SIM Card Only 1GB <br>
+				<input type="radio" name="Mobilecategory" value="SIM Card Only 4GB">SIM Card Only 4GB <br>
+				<input type="radio" name="Mobilecategory" value="Mobile Broadband SIM 4GB">Mobile Broadband SIM 4GB <br>
+				<input type="radio" name="Mobilecategory" value="Mobile Broadband SIM 16GB">Mobile Broadband SIM 16GB <br>
+				<input type="radio" name="Mobilecategory" value="SIM Card Only 1GB (Saver 1)">SIM Card Only 1GB (Saver 1) <br>
+				<input type="radio" name="Mobilecategory" value="SIM Card Only 4GB (Saver 1)">SIM Card Only 4GB (Saver 1) <br>
+				<input type="radio" name="Mobilecategory" value="SIM Card Only 1GB (Saver 2)">SIM Card Only 1GB (Saver 2) <br>
+				<input type="radio" name="Mobilecategory" value="SIM Card Only 4GB (Saver 2)">SIM Card Only 4GB (Saver 2) <br>
+				</div>
+		</div>
+		
+         <br>Product PostCode :<input type="text" id="ppcode" name="ppostalcode" requird><br>
+         <br>Principal Contact :<label>
+         <input type="radio" name="pcontact" value="Yes">Yes </label>
+         <label><input type="radio" name="pcontact" value="No" checked="checked">No</label>
+
+		<br> <br> Select the Browser<select name="browser" id="browser">
+			<option value="Internet Explorer">InternetExplorer</option>
+			<option value="FireFox">Fire Fox</option>
+			<option value="Google Chrome">Google Chrome</option>
+		</select><br> <br> Enter TotalData<input type="text" name="ToatalData" id="tData" required><br>
+		<br>Enter AdminID<input type="text" name="adminId" id="aID"><br>
+		<br>Enter AdminPassword<input type="password" name="adminpassword" id="apassword"><br>
+		<br>Enter TeleSalesID<input type="text" name="teleSalesID" id="tID"><br>
+		<br>Enter TeleSalesPassword<input type="password" name="teleSalesPassword" id="tpassword"><br>
+		 <br>Would you like to provide additiional information ? <label>
+         <input type="radio" name="addinfo" value="addYes">Yes </label>
+         <label><input type="radio" name="addinfo" value="addNo" checked="checked">No</label>
+         <div id="addYes" class="box">
+		<br>Enter DebtUserID<input type="text" name="debtUserID" id="dID"><br>
+		<br>Enter DebtUserPassword<input type="password" name="debtUserIDpassword" id="dpassword"><br>
+		<br>Enter CreditUserID<input type="text" name="creditUserID" id="cID"><br>
+		<br>Enter CreditUserPassword<input type="password" name="creditUserPassword" id="cpassword"><br>
+		<br>Enter BacsUserID<input type="text" name="bacsUserID" id="bID"><br>
+		<br>Enter BacsUserPassword<input type="password" name="bacsUserPassword" id="bpassword"><br>
+		<br>Enter FraudUserID<input type="text" name="fraudUserID" id="fID"><br>
+		<br>Enter FraudUserPassword<input type="password" name="fraudUserPassword" id="fpassword"><br>
+		</div>
+		<br> User Comments <input type="text" name="comments" id="cmnt"><br>
+		<br> <button id="submit" class="button">Submit</button>
+
+	</div>
+</body>
+</html>

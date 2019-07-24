@@ -1,0 +1,36 @@
+@CHARSET "ISO-8859-1";
+.box{
+	 display: none;
+}
+.sa{
+	color: red;
+}
+.bu{
+	color: blue;
+	
+}
+h3{
+	color: red;
+	text-align: center;
+}
+
+body {
+	background-color :  #b7f1f1;
+	color : #000000;
+	padding-bottom: 20%;
+	padding-left: 10%;
+	padding-right: 30%;
+	padding-top: 2%;
+}
+.button {
+    background-color: #ff0000;
+    border: none;
+    color: white;
+    padding: 1px 3px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px 2px;
+    cursor: pointer;
+}
